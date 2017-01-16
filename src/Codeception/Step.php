@@ -111,7 +111,7 @@ abstract class Step
                 return ($length1 < $length2) ? -1 : 1;
             });
 
-            $allowedLength = floor(($maxLength - $argumentCount + 1) / $argumentCount);
+            $allowedLength = floor(($maxLength - $argumentCount + 1) / max($argumentCount, 1));
 
             $lengthRemaining = $maxLength;
             $argumentsRemaining = $argumentCount;
